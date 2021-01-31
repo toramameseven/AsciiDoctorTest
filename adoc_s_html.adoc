@@ -1,7 +1,6 @@
 
 example
 
-[options="autowidth"]
 |===
 a|Language Feature a|AsciiDoc Src a|AsciiDoc
 
