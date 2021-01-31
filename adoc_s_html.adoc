@@ -1,6 +1,7 @@
 
 example
 
+[width="60%",cols="3"]
 |===
 a|Language Feature a|AsciiDoc Src a|AsciiDoc
 
@@ -270,7 +271,9 @@ XXXXX
 a|Admonitions
 a|[source,asciidoc]
 -----
-TIP: You can add line numbers to source listings by adding the word `numbered` in the attribute list after the language name.
+TIP: You can add line numbers to source listings by 
+adding the word `numbered` in the attribute 
+list after the language name.
 -----
 a|TIP: You can add line numbers to source listings by adding the word `numbered` in the attribute list after the language name.
 
