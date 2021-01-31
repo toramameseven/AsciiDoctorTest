@@ -1,0 +1,337 @@
+
+example
+
+
+|===
+a|Language Feature a|AsciiDoc Src a|AsciiDoc
+
+
+a|Bold (constrained)
+a|[source,asciidoc]
+-----
+*bold*
+-----
+a|*bold*
+
+
+a|Bold (unconstrained)
+a|[source,asciidoc]
+-----
+**b**old
+-----
+a|**b**old
+
+
+a|Italic (constrained)
+a|[source,asciidoc]
+-----
+_italic_
+-----
+a|_italic_
+
+
+a|Italic (unconstrained)
+a|[source,asciidoc]
+-----
+__i__talic
+-----
+a|__i__talic
+
+
+a|Monospace (constrained)
+a|[source,asciidoc]
+-----
+`monospace`
+-----
+a|`monospace`
+
+
+a|Monospace (unconstrained)
+a|[source,asciidoc]
+-----
+``m``onospace
+-----
+a|``m``onospace
+
+
+a|Link with label
+a|[source,asciidoc]
+-----
+https://asciidoctor.org[Asciidoctor]
+-----
+a|https://asciidoctor.org[Asciidoctor]
+
+
+a|Relative link
+a|[source,asciidoc]
+-----
+link:user-guide.html[user guide]
+xref:user-guide.adoc[user guide]
+-----
+a|link:user-guide.html[user guide]
+xref:user-guide.adoc[user guide]
+
+
+a|File link
+a|[source,asciidoc]
+-----
+link:{site-url}/assets/mydoc.pdf[get the PDF]
+-----
+a|link:{site-url}/assets/mydoc.pdf[get the PDF]
+
+
+a|Cross reference
+a|[source,asciidoc]
+-----
+See <<_usage>>.
+== Usage
+-----
+a|See <<_usage>>.
+== Usage
+
+
+a|Block ID (aka anchor)
+a|[source,asciidoc]
+-----
+[#usage]
+== Usage
+-----
+a|[#usage]
+== Usage
+
+
+a|Inline anchor
+a|[source,asciidoc]
+-----
+. [[step-1]]Download the software
+-----
+a|. [[step-1]]Download the software
+
+
+a|Inline image w/ alt text
+a|[source,asciidoc]
+-----
+image:logo.png[Logo]
+-----
+a|image:logo.png[Logo]
+
+
+a|Block image w/ alt text
+a|[source,asciidoc]
+-----
+image::logo.png[Logo]
+-----
+a|image::logo.png[Logo]
+
+
+a|Section heading*
+a|[source,asciidoc]
+-----
+== Heading 2
+-----
+a|== Heading 2
+
+
+a|Blockquote*
+a|[source,asciidoc]
+-----
+____
+Quoted text.
+
+Another paragraph in quote.
+____
+-----
+a|____
+Quoted text.
+
+Another paragraph in quote.
+____
+
+
+a|Literal block
+a|[source,asciidoc]
+-----
+Example 1. Indented (by 1 or more spaces)
+ $ gem install asciidoctor
+Example 2. Delimited
+....
+$ gem install asciidoctor
+....
+-----
+a|Example 1. Indented (by 1 or more spaces)
+ $ gem install asciidoctor
+Example 2. Delimited
+....
+$ gem install asciidoctor
+....
+
+
+a|Code block*
+a|[source,asciidoc]
+-----
+[source,java]
+----
+public class Person {
+  private String name;
+  public Person(String name) {
+    this.name = name;
+  }
+}
+----
+-----
+a|[source,java]
+----
+public class Person {
+  private String name;
+  public Person(String name) {
+    this.name = name;
+  }
+}
+----
+
+
+a|Unordered list
+a|[source,asciidoc]
+-----
+* apples
+* oranges
+** temple
+** navel
+* bananas
+-----
+a|* apples
+* oranges
+** temple
+** navel
+* bananas
+
+
+a|Ordered list
+a|[source,asciidoc]
+-----
+. first
+. second
+. third
+-----
+a|. first
+. second
+. third
+
+
+a|Thematic break (aka horizontal rule)*
+a|[source,asciidoc]
+-----
+''
+
+
+
+
+
+-----
+a|''
+
+
+
+
+
+
+
+a|Typographic quotes (aka “smart quotes”)
+a|[source,asciidoc]
+-----
+The `'90s popularized a new form of music known as "`grunge`" rock.
+It'll turn out to have an impact that extended well beyond music.
+-----
+a|The `'90s popularized a new form of music known as "`grunge`" rock.
+It'll turn out to have an impact that extended well beyond music.
+
+
+a|Document header
+a|[source,asciidoc]
+-----
+Example 4. Native support!
+XXXXX
+:awestruct-layout: base
+:showtitle:
+:prev_section: defining-frontmatter
+:next_section: creating-pages
+
+
+-----
+a|Example 4. Native support!
+XXXXX
+:awestruct-layout: base
+:showtitle:
+:prev_section: defining-frontmatter
+:next_section: creating-pages
+
+
+
+
+a|Admonitions
+a|[source,asciidoc]
+-----
+TIP: You can add line numbers to source listings by adding the word `numbered` in the attribute list after the language name.
+-----
+a|TIP: You can add line numbers to source listings by adding the word `numbered` in the attribute list after the language name.
+
+
+a|Sidebars
+a|[source,asciidoc]
+-----
+.Lightweight Markup
+****
+Writing languages that let you type less and express more.
+****
+-----
+a|.Lightweight Markup
+****
+Writing languages that let you type less and express more.
+****
+
+
+a|Block titles
+a|[source,asciidoc]
+-----
+.Grocery list
+* Milk
+* Eggs
+* Bread
+-----
+a|.Grocery list
+* Milk
+* Eggs
+* Bread
+
+
+a|Includes
+a|[source,asciidoc]
+-----
+include::intro.adoc[]
+-----
+a|include::intro.adoc[]
+
+
+a|URI reference
+a|[source,asciidoc]
+-----
+:home: https://example.org
+Go to the {home}[home page].
+
+
+-----
+a|:home: https://example.org
+Go to the {home}[home page].
+
+
+
+
+a|Custom CSS classes
+a|[source,asciidoc]
+-----
+[.path]_Gemfile_
+-----
+a|[.path]_Gemfile_
+|===
+* Asciidoctor also supports the Markdown syntax for this language feature.
+
