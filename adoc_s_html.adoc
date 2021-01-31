@@ -244,8 +244,10 @@ known as "`grunge`" rock.
 It'll turn out to have an impact that 
 extended well beyond music.
 -----
-a|The `'90s popularized a new form of music known as "`grunge`" rock.
-It'll turn out to have an impact that extended well beyond music.
+a|The `'90s popularized a new form of music 
+known as "`grunge`" rock.
+It'll turn out to have an impact that 
+extended well beyond music.
 
 
 a|Document header
@@ -277,7 +279,9 @@ TIP: You can add line numbers to source listings by
 adding the word `numbered` in the attribute 
 list after the language name.
 -----
-a|TIP: You can add line numbers to source listings by adding the word `numbered` in the attribute list after the language name.
+a|TIP: You can add line numbers to source listings by
+adding the word `numbered` in the attribute
+list after the language name.
 
 
 a|Sidebars
