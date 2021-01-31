@@ -239,8 +239,10 @@ a|''
 a|Typographic quotes (aka “smart quotes”)
 a|[source,asciidoc]
 -----
-The `'90s popularized a new form of music known as "`grunge`" rock.
-It'll turn out to have an impact that extended well beyond music.
+The `'90s popularized a new form of music 
+known as "`grunge`" rock.
+It'll turn out to have an impact that 
+extended well beyond music.
 -----
 a|The `'90s popularized a new form of music known as "`grunge`" rock.
 It'll turn out to have an impact that extended well beyond music.
