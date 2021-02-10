@@ -1,7 +1,8 @@
 
 example
 
-[width="60%",cols="3"]
+//[width="60%",cols="3"]
+[options="autowidth"]
 |===
 a|Language Feature a|AsciiDoc Src a|AsciiDoc
 
@@ -280,12 +281,14 @@ a|[source,asciidoc]
 -----
 .Lightweight Markup
 ****
-Writing languages that let you type less and express more.
+Writing languages that let you type 
+less and express more.
 ****
 -----
 a|.Lightweight Markup
 ****
-Writing languages that let you type less and express more.
+Writing languages that let you type 
+less and express more.
 ****
 
 
