@@ -1,0 +1,445 @@
+
+:experimental:
+
+= Asciidoc cheat sheet
+
+This cheat sheet is modified from https://docs.asciidoctor.org/asciidoc/latest/asciidoc-vs-markdown/
+
+|===
+a|Language Feature a|AsciiDoc Src a|AsciiDoc
+
+
+a|Document header
+a|[source,asciidoc]
+-----
+Example 4. Native support!
+XXXXX
+:awestruct-layout: base
+:showtitle:
+:prev_section: defining-frontmatter
+:next_section: creating-pages
+
+
+-----
+a|Example 4. Native support!
+XXXXX
+:awestruct-layout: base
+:showtitle:
+:prev_section: defining-frontmatter
+:next_section: creating-pages
+
+
+
+
+a|Includes
+a|[source,asciidoc]
+-----
+include::intro.adoc[]
+-----
+a|include::intro.adoc[]
+
+
+a|Section heading*
+a|[source,asciidoc]
+-----
+== Heading 2
+
+=== Heading 3
+-----
+a|== Heading 2
+
+=== Heading 3
+
+
+a|Unordered list
+a|[source,asciidoc]
+-----
+* bikes
+* cars
+** sport cars
+** sedan
+* airplanes
+-----
+a|* bikes
+* cars
+** sport cars
+** sedan
+* airplanes
+
+
+a|Ordered list
+a|[source,asciidoc]
+-----
+. Item1
+. Item2
+. Item3
+-----
+a|. Item1
+. Item2
+. Item3
+
+
+a|Code block*
+a|[source,asciidoc]
+-----
+[source,C#]
+----
+public class Car {
+  private String name;
+  public Car(String name) {
+    this.name = name;
+  }
+}
+----
+-----
+a|[source,C#]
+----
+public class Car {
+  private String name;
+  public Car(String name) {
+    this.name = name;
+  }
+}
+----
+
+
+a|Table
+a|[source,asciidoc]
+-----
+
+\|====
+\|colomn1 \|colomn2
+
+\|cell11
+\|cell12
+
+\|cell21
+\|cell22
+\|====
+
+
+-----
+a|
+!====
+!colomn1 !colomn2
+
+!cell11
+!cell12
+
+!cell21
+!cell22
+!====
+
+
+a|Keyboard Short Cut
+a|[source,asciidoc]
+-----
+\|===
+\|Short cut \|feature
+
+\|kbd:[F11]
+\|All Dispaly
+
+\|kbd:[Ctrl+T]
+\|New Tab
+
+\|kbd:[Ctrl+Shift+N]
+\|Open New Window
+
+\|kbd:[Ctrl + +]
+\|Zoom
+\|===
+-----
+a|!===
+!Short cut !feature
+
+!kbd:[F11]
+!All Dispaly
+
+!kbd:[Ctrl+T]
+!New Tab
+
+!kbd:[Ctrl+Shift+N]
+!Open New Window
+
+!kbd:[Ctrl + +]
+!Zoom
+!===
+
+
+a|Menu
+a|[source,asciidoc]
+-----
+menu:View[Zoom > Reset]
+-----
+a|menu:View[Zoom > Reset]
+
+
+a|Button
+a|[source,asciidoc]
+-----
+btn:[OK] 
+-----
+a|btn:[OK] 
+
+
+a|Link with label
+a|[source,asciidoc]
+-----
+https://asciidoctor.org[Asciidoctor]
+-----
+a|https://asciidoctor.org[Asciidoctor]
+
+
+a|Inline image w/ alt text
+a|[source,asciidoc]
+-----
+this is image:logo.png[Logo]
+-----
+a|this is image:logo.png[Logo]
+
+
+a|Block image w/ alt text
+a|[source,asciidoc]
+-----
+this is 
+
+image::logo.png[Logo]
+-----
+a|this is 
+
+image::logo.png[Logo]
+
+
+a|Blockquote*
+a|[source,asciidoc]
+-----
+____
+Quoted text.
+
+Another paragraph in quote.
+____
+-----
+a|____
+Quoted text.
+
+Another paragraph in quote.
+____
+
+
+a|Admonitions
+a|[source,asciidoc]
+-----
+TIP: TIP `Tip`
+
+NOTE: Note
+
+IMPORTANT: Important
+
+WARNING: Warning
+
+CAUTION: Caution
+
+-----
+a|TIP: TIP `Tip`
+
+NOTE: Note
+
+IMPORTANT: Important
+
+WARNING: Warning
+
+CAUTION: Caution
+
+
+
+a|URI ref and Replace
+a|[source,asciidoc]
+-----
+:home: https://example.org
+Go to the {home}[example home page].
+
+
+-----
+a|:home: https://example.org
+Go to the {home}[example home page].
+
+
+
+
+a|Relative link
+a|[source,asciidoc]
+-----
+link:user-guide.html[user guide html] 
+
+xref:user-guide.adoc[user guide adoc]
+-----
+a|link:user-guide.html[user guide html] 
+
+xref:user-guide.adoc[user guide adoc]
+
+
+a|File link
+a|[source,asciidoc]
+-----
+link:{site-url}/assets/mydoc.pdf[get the PDF]
+-----
+a|link:{site-url}/assets/mydoc.pdf[get the PDF]
+
+
+a|Cross reference
+a|[source,asciidoc]
+-----
+See <<_usage>>.
+
+
+== Usage
+-----
+a|See <<_usage>>.
+
+
+== Usage
+
+
+a|Block ID and Xref
+a|[source,asciidoc]
+-----
+See<<usage2, UsageTwo>>
+
+
+
+[#usage2]
+== Usage2
+-----
+a|See<<usage2, UsageTwo>>
+
+
+
+[#usage2]
+== Usage2
+
+
+a|Inline anchor and Xref
+a|[source,asciidoc]
+-----
+. [[step-1]]Download the software
+
+
+
+See<<step-1, DTS>>
+-----
+a|. [[step-1]]Download the software
+
+
+
+See<<step-1, DTS>>
+
+
+a|Literal block
+a|[source,asciidoc]
+-----
+Example 1. Indented (by 1 or more spaces)
+
+ $ gem install asciidoctor
+
+Example 2. Delimited
+....
+$ gem install asciidoctor
+....
+-----
+a|Example 1. Indented (by 1 or more spaces)
+
+ $ gem install asciidoctor
+
+Example 2. Delimited
+....
+$ gem install asciidoctor
+....
+
+
+a|Typographic quotes
+a|[source,asciidoc]
+-----
+The `'90s popularized a new form of music known as "`grunge`" rock.
+It'll turn out to have an impact that extended well beyond music.
+-----
+a|The `'90s popularized a new form of music known as "`grunge`" rock.
+It'll turn out to have an impact that extended well beyond music.
+
+
+a|Sidebars
+a|[source,asciidoc]
+-----
+.Lightweight Markup
+****
+Writing languages that let you type less and express more.
+****
+-----
+a|.Lightweight Markup
+****
+Writing languages that let you type less and express more.
+****
+
+
+a|Block titles
+a|[source,asciidoc]
+-----
+.Grocery list
+* Milk
+* Eggs
+* Bread
+-----
+a|.Grocery list
+* Milk
+* Eggs
+* Bread
+
+
+a|Bold (constrained)
+a|[source,asciidoc]
+-----
+*bold*
+-----
+a|*bold*
+
+
+a|Bold (unconstrained)
+a|[source,asciidoc]
+-----
+**b**old
+-----
+a|**b**old
+
+
+a|Italic (constrained)
+a|[source,asciidoc]
+-----
+_italic_
+-----
+a|_italic_
+
+
+a|Italic (unconstrained)
+a|[source,asciidoc]
+-----
+__i__talic
+-----
+a|__i__talic
+
+
+a|Monospace (constrained)
+a|[source,asciidoc]
+-----
+`monospace`
+-----
+a|`monospace`
+
+
+a|Monospace (unconstrained)
+a|[source,asciidoc]
+-----
+``m``onospace
+-----
+a|``m``onospace
+|===
+
